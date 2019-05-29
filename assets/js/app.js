@@ -37,11 +37,14 @@ $("#incompleteRoutes").keyup(function(){
 
 // Final Calculation
 $("#submit").click(function(){
+    // ========= IN DEVELOPMENT ==============
     // autofills  empty input boxes
-    if ($("input") == ''){
-        alert('please fill out all boxes');
-        $("input").val(0);
-    }
+    // if ($("input") == ''){
+    //     alert('please fill out all boxes');
+    //     $("input").val(0);
+    // }
+    // ======================================
+
     // Calculates trains
     for (i = 0; i < 6; i++){
     finalScore = finalScore + $("#l" + i).val()*multiplier[i];
@@ -55,11 +58,11 @@ $("#submit").click(function(){
         finalScore = finalScore - parseInt($("#incomplete" + i).val());
     }
 
-    //Text reset (since button is default false)
+    // Text reset (since button is default false)
     $("#finalScore").html("The final score is: ");
     // Final score is displayed
     $("#finalScore").append(finalScore);
-    //reset var finalScore
+    // Reset var finalScore
     finalScore = 0;
     
 });
