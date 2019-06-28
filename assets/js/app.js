@@ -4,6 +4,10 @@ var numberIncomplete;
 var multiplier = [1,2,4,7,10,15];
 var finalScore = 0;
 
+// function on click then select feature for input boxes
+$("input").on('click', funtion(){
+    this.select 
+})
 // creating completed routes score input boxes
 $("#completedRoutes").keyup(function(){
     // removes extraneous input boxes
