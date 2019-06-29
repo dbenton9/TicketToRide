@@ -6,8 +6,7 @@ var finalScore = 0;
 
 // function on click then select feature for input boxes
 $("input").on('click', function() {
-    this.select() 
-    console.log("hello");
+    this.select(); 
 });
 
 // creating completed routes score input boxes
