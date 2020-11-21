@@ -40,6 +40,7 @@ $("#incompleteRoutes").keyup(function(){
         inputBox.attr("value", 0);
         inputBox.attr("id", "incomplete"+i);
         inputBox.attr("onClick", "this.select()");
+        inputBox.attr("type", "number");
         inputBox.attr("pattern", "[0-9]*")
     }
 });
