@@ -21,8 +21,8 @@ $("#completedRoutes").keyup(function(){
         inputBox.addClass("completedInput");
         inputBox.attr("value", 0);
         inputBox.attr("id", "completed"+i);
-        inputBox.attr("onClick", "this.select()")
-
+        inputBox.attr("onClick", "this.select()");
+        inputBox.attr("pattern", "[0-9]*")
     }
 });
 
@@ -38,7 +38,8 @@ $("#incompleteRoutes").keyup(function(){
         inputBox.addClass("incompleteInput");
         inputBox.attr("value", 0);
         inputBox.attr("id", "incomplete"+i);
-        inputBox.attr("onClick", "this.select()")
+        inputBox.attr("onClick", "this.select()");
+        inputBox.attr("pattern", "[0-9]*")
     }
 });
 
