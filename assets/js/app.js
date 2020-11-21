@@ -22,8 +22,8 @@ $("#completedRoutes").keyup(function(){
         inputBox.attr("value", 0);
         inputBox.attr("id", "completed"+i);
         inputBox.attr("onClick", "this.select()");
-        inputBox.attr("type", "")
-        inputBox.attr("pattern", "[0-9]*")
+        inputBox.attr("type", "text")
+        inputBox.attr("pattern", "\d*")
     }
 });
 
