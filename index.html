@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        
+         
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
@@ -19,28 +19,33 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
+                    <div><h2 id="finalScore">Your final score is: </h2></div>
                     <form onsubmit="return false">
-                        <h2>Train Segments</h2>
-                        Length 1: <input type="" pattern="[0-9]*" id="l0" value="0" min="0"><br>
-                        Length 2: <input type="" pattern="[0-9]*" id="l1" value="0" min="0"><br>
-                        Length 3: <input type="" pattern="[0-9]*" id="l2" value="0" min="0"><br>
-                        Length 4: <input type="" pattern="[0-9]*" id="l3" value="0" min="0"><br>
-                        Length 5: <input type="" pattern="[0-9]*" id="l4" value="0" min="0"><br>
-                        Length 6: <input type="" pattern="[0-9]*" id="l5" value="0" min="0"><br>
+                        <div class="tabs"></div>
+                            <button class="tablinks" id="trainslink">trains</button>
+                            <button class="tablinks" id="routeslink">routes</button>
+                            <button id="submit" class="btn btn-outline-primary">Calculate</button>
+                            <input type="reset"></input><br>
+                            <div id="trains" class="tabcontent">
+                                <h2>Train Segments</h2>
+                                Length 1: <input type="" pattern="[0-9]*" id="l0" value="0" min="0"><br>
+                                Length 2: <input type="" pattern="[0-9]*" id="l1" value="0" min="0"><br>
+                                Length 3: <input type="" pattern="[0-9]*" id="l2" value="0" min="0"><br>
+                                Length 4: <input type="" pattern="[0-9]*" id="l3" value="0" min="0"><br>
+                                Length 5: <input type="" pattern="[0-9]*" id="l4" value="0" min="0"><br>
+                                Length 6: <input type="" pattern="[0-9]*" id="l5" value="0" min="0"><br>
+                            </div>
+                            <div id="routes" class="tabcontent">
+                                <h2>Routes</h2>
+                                How many routes did you complete? <br>
+                                <input type="" pattern="[0-9]*" id="completedRoutes" value="0" min="0">
+                                <div id="completed"></div>
 
-                        <h2>Routes</h2>
-                        How many routes did you complete? <br>
-                        <input type="" pattern="[0-9]*" id="completedRoutes" value="0" min="0">
-                        <div id="completed"></div>
-
-                        How many routes were not completed? <br>
-                        <input type="" pattern="[0-9]*" id="incompleteRoutes" value="0" min="0">
-                        <div id="incomplete"></div>
-
-                        <button id="submit" class="btn btn-outline-primary">Calculate</button><br>
-                        <div><h2 id="finalScore">Your final score is: </h2></div>
-
-
+                                How many routes were not completed? <br>
+                                <input type="" pattern="[0-9]*" id="incompleteRoutes" value="0" min="0">
+                                <div id="incomplete"></div>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="col-sm-2"></div>

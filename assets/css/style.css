@@ -1,3 +1,11 @@
 h1 {
     text-align: center;
 }
+
+.tabcontent{
+    display: none
+}
+
+#trains{
+    display: block
+}

@@ -5,9 +5,32 @@ var multiplier = [1,2,4,7,10,15];
 var finalScore = 0;
 
 // function on click then select feature for input boxes
-$("input").on('click', function() {
+$("input").click(function() {
     this.select(); 
 });
+
+// loading different tabs
+$(".tablinks").click(function(){
+    console.log()
+    var i, tabcontent, tablinks, currentId;
+    tabcontent = $(".tabcontent")
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = $(".tablinks")
+    // adding active class for styling to link
+    // for (i = 0; i < tablinks.length; i++) {
+    //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+    // }
+    switch(this.id){
+        case "trainslink":
+            $("#trains").css('display', 'block');
+            break;
+        case "routeslink":
+            $("#routes").css('display', 'block');
+            break;
+    }
+})
 
 // creating completed routes score input boxes
 $("#completedRoutes").keyup(function(){
@@ -47,14 +70,6 @@ $("#incompleteRoutes").keyup(function(){
 
 // Final Calculation
 $("#submit").click(function(){
-    // ========= IN DEVELOPMENT ==============
-    // autofills  empty input boxes
-    // if ($("input") == ''){
-    //     alert('please fill out all boxes');
-    //     $("input").val(0);
-    // }
-    // ======================================
-
     // Calculates trains
     for (i = 0; i < 6; i++){
     finalScore = finalScore + $("#l" + i).val()*multiplier[i];
