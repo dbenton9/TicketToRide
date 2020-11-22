@@ -68,8 +68,15 @@ $("#incompleteRoutes").keyup(function(){
     }
 });
 
+// Reset
+$("#reset").click(function(){
+    $("#finalScore").html("The total score is: 0");
+    $(".completedInput").remove();
+    $(".incompleteInput").remove();
+})
+
 // Final Calculation
-$("#submit").click(function(){
+$("body").on('keyup', 'input', function(){
     // Calculates trains
     for (i = 0; i < 6; i++){
     finalScore = finalScore + $("#l" + i).val()*multiplier[i];
@@ -84,10 +91,9 @@ $("#submit").click(function(){
     }
 
     // Text reset (since button is default false)
-    $("#finalScore").html("The final score is: ");
+    $("#finalScore").html("The total score is: ");
     // Final score is displayed
     $("#finalScore").append(finalScore);
     // Reset var finalScore
     finalScore = 0;
-    
 });
